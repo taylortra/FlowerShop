@@ -21,6 +21,10 @@ html{
     overflow-x: hidden;
 }
 
+section{
+    padding:2rem 9%;
+}
+
 header{
     position: fixed;
     top:0;
@@ -76,6 +80,43 @@ header .fa-bars{
     display: none;
 }
 
+.home{
+    display: flex;
+    align-items: center;
+    min-height: 100vh;
+    background: url(images/home-bg.jpg) no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
+.home .content{
+    max-width: 50rem;
+}
+
+.home .content h3{
+    font-size: 6rem;
+    color: #333;
+}
+
+.home .content span{
+    font-size: 3.5rem;
+    color: var(--pink);
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+.home .content span{
+    font-size: 1.5rem;
+    color: #999;
+    padding:1rem 0;
+    line-height: 1.5;
+}
+
+
+
+
+
+
 
 @media(max-width:991px){
 
@@ -100,6 +141,10 @@ header .fa-bars{
         background: #eee;
         border-top: .1rem solid rgba(0,0,0,.1);
         clip-path: polygon(0 0, 100% 0, 100% 0, 0 0);
+    }
+
+    header #toggler:checked ~ .navbar{
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0% 100%);
     }
     header .navbar a{
         margin:1.5rem;
